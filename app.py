@@ -347,7 +347,6 @@ elif selection == "Country-wise Analysis":
 
 elif selection == "Athlete-wise Analysis":
     if season_selection == "Summer":
-        st.write(f"Displaying Athlete-wise Analysis for {season_selection} season...")
         athlete_df=df_summer.drop_duplicates(subset=['Name','region'])
         x1=athlete_df['Age'].dropna()
         x2=athlete_df[athlete_df['Medal']=='Gold']['Age'].dropna()
@@ -396,7 +395,6 @@ elif selection == "Athlete-wise Analysis":
 
 
     elif season_selection == "Winter":
-        st.write(f"Displaying Athlete-wise Analysis for {season_selection} season...")
         athlete_df=df_winter.drop_duplicates(subset=['Name','region'])
         x1=athlete_df['Age'].dropna()
         x2=athlete_df[athlete_df['Medal']=='Gold']['Age'].dropna()
